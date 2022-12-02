@@ -1,9 +1,10 @@
-import Example from "./Select";
+
+import Top10Recipes from "./top_recetas";
 
 function App() {
   return (
     <div>
-      <Example />
+      <Top10Recipes ingredients={"apple"}/>
     </div>
   )
 }
