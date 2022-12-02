@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect} from 'react';
-import Top10Recipes from '../top_recetas'
 import { useParams } from 'react-router-dom';
 
 const URL = 'https://recipe-recommender.herokuapp.com/recommender?ingredients=';
@@ -12,7 +11,7 @@ const Recipes = () => {
     useEffect(()=>{
         console.log(recipes)
         getRecipes()
-    },[ingredients])
+    },[ingredients]) 
 
     const getRecipes = async () => {
         const res = await axios.get(`${URL}${ingredients}`)
