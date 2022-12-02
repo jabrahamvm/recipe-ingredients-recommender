@@ -1,20 +1,6 @@
 import React from 'react'
-import axios from 'axios';
-import { useState, useEffect} from 'react';
 
-const URL = 'http://10.10.129.93:5000/?ingredients=apple';
-
-const Top10Recipes = ({ingredients}) => {
-    const [recipes, setRecipes] = useState([])
-    useEffect(()=>{
-        console.log(ingredients)
-        getRecipes()
-    },[])
-
-    const getRecipes = async () => {
-        const res = await axios.get(URL)
-        setRecipes(res.data)
-    }
+const Top10Recipes = ({recipes}) => {
 
     return (
         <div className='container'>

@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     // Add Base to all these pages
     children: [
       {
-        path: "/",
+        path: "/:ingredients",
         element: <Recipes/>
       },
     ]
@@ -45,15 +45,10 @@ const router = createBrowserRouter([
 // Add commonnames for styling
 function App() {
   return (
-<<<<<<< HEAD
-    <div>
-      <Top10Recipes ingredients={"apple"}/>
-=======
     <div className="app">
       <div className="container">
         <RouterProvider router={router}/>
       </div>
->>>>>>> 66d947ece8c29cad22e9c9c7228e7acd8bf5fa06
     </div>
   );
 }
