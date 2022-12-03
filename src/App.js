@@ -2,7 +2,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet, // Any page we want between header and footer
 } from "react-router-dom";
 
@@ -10,11 +9,11 @@ import {
 import Recipes from "./pages/Recipes"
 
 // Components on seperate folder
-import Footer from "./components/Footer"
 import Header from "./components/Header"
 
 // Import css file
 import "./style.scss"
+import RecipeDetails from "./pages/RecipeDetails";
 
 // A Base for all pages on our site
 const Layout = () => {
@@ -36,6 +35,10 @@ const router = createBrowserRouter([
         path: "/:ingredients",
         element: <Recipes/>
       },
+      {
+        path: "/recipes/:id",
+        element: <RecipeDetails />
+      }
     ]
   },
 ]);

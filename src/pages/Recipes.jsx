@@ -1,9 +1,11 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import RecipeDetails from './RecipeDetails';
 
-const URL = 'https://recipe-recommender.herokuapp.com/recommender?ingredients=';
+const URL_2 = 'https://recipe-recommender.herokuapp.com/recommender?ingredients=';
+const URL = 'http://localhost:5000/recommender/?ingredients=';
 
 const Recipes = () => {
     const {ingredients} = useParams()
@@ -15,7 +17,9 @@ const Recipes = () => {
 
     const getRecipes = async () => {
         const res = await axios.get(`${URL}${ingredients}`)
-        setRecipes(res.data.data)
+        console.log(res.data)
+        // Add res.data.data when working with API from heroku
+        setRecipes(res.data)
     }
     return (
         <div className='container mx-auto w-75'>
@@ -34,6 +38,7 @@ const Recipes = () => {
                                 <tr key={recipe.id}>
                                     <td>{recipe.id}</td>
                                     <td>{recipe.name}</td>
+                                    <td><RecipeDetails id={recipe.id}/></td>
                                 </tr>
                             ))}
                         </tbody>
