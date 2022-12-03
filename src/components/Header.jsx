@@ -30,14 +30,27 @@ const Header = () => {
     }
 
     return (
-        <div>
-           <MultiSelect
-                options={options}
-                value={selected}
-                onChange={setSelected}
-                labelledBy="Choose your ingredients"
-            />
-            <button onClick={redirect} className="btn btn-primary">Get recommendations</button>
+        <div className="container text-secondary px-9 py-3 text-center">
+            <div className="py-5">
+                <h1 className="display-5 fw-bold">Recipes recommendations</h1>
+                <div className="col-lg-6 mx-auto">
+                    <p className="fs-5 mb-4">Get recipe recommendations based on your favorite ingredients!</p>
+                    <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <div style={{"width" : "100%"}}>
+                            <MultiSelect
+                                options={options}
+                                value={selected}
+                                onChange={setSelected}
+                                labelledBy="Choose your ingredients"
+                                className="multi-select"
+                            />
+                        </div>
+                        <div className="d-grip">
+                            <button onClick={redirect} className="btn btn-primary btn-block">Get Recipes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

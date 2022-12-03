@@ -22,7 +22,6 @@ const Layout = () => {
     <>
       <Header />
       <Outlet />
-      <Footer />
     </>
   );
 };
@@ -45,8 +44,8 @@ const router = createBrowserRouter([
 // Add commonnames for styling
 function App() {
   return (
-    <div className="app">
-      <div className="container">
+    <div>
+      <div className="container justify-content-sm-center">
         <RouterProvider router={router}/>
       </div>
     </div>

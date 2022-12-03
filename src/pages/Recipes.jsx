@@ -18,7 +18,7 @@ const Recipes = () => {
         setRecipes(res.data.data)
     }
     return (
-        <div className='container'>
+        <div className='container mx-auto w-75'>
             <div className='row'>
                 <div className='col'>
                     <table className='table'>
