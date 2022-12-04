@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/recipe-ingredients-recommender/static/css/main.3d041f92.css",
+    "main.js": "/recipe-ingredients-recommender/static/js/main.a3e197c1.js",
+    "static/js/787.a1ebc73f.chunk.js": "/recipe-ingredients-recommender/static/js/787.a1ebc73f.chunk.js",
+    "index.html": "/recipe-ingredients-recommender/index.html",
+    "main.3d041f92.css.map": "/recipe-ingredients-recommender/static/css/main.3d041f92.css.map",
+    "main.a3e197c1.js.map": "/recipe-ingredients-recommender/static/js/main.a3e197c1.js.map",
+    "787.a1ebc73f.chunk.js.map": "/recipe-ingredients-recommender/static/js/787.a1ebc73f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d041f92.css",
+    "static/js/main.a3e197c1.js"
+  ]
+}
