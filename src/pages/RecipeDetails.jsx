@@ -6,7 +6,8 @@ import { Link, useParams } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import IngredientsCard from '../components/RecipeCard';
 
-const URL = 'http://localhost:5000/recipes/'
+const URL = 'https://recipe-recommender.herokuapp.com/recipe?recipeId='
+const URL_debug = 'http://localhost:5000/recipes/'
 
 const RecipeDetails = ({id}) => {
   const [show, setShow] = useState(false);

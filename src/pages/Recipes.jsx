@@ -4,8 +4,8 @@ import { useState, useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import RecipeDetails from './RecipeDetails';
 
-const URL_2 = 'https://recipe-recommender.herokuapp.com/recommender?ingredients=';
-const URL = 'http://localhost:5000/recommender/?ingredients=';
+const URL = 'https://recipe-recommender.herokuapp.com/recommender?ingredients=';
+const URL_debug = 'http://localhost:5000/recommender/?ingredients=';
 
 const Recipes = () => {
     const {ingredients} = useParams()
@@ -17,9 +17,9 @@ const Recipes = () => {
 
     const getRecipes = async () => {
         const res = await axios.get(`${URL}${ingredients}`)
-        console.log(res.data)
+        console.log(res.data.data)
         // Add res.data.data when working with API from heroku
-        setRecipes(res.data)
+        setRecipes(res.data.data)
     }
     return (
         <div className='container mx-auto w-75'>
